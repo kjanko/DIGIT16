@@ -33,7 +33,17 @@ img#logo
 {
 	position: relative;
 	display: none;
+	transition: all .2s ease-in-out;
 }
+
+	img#logo:hover
+	{
+		-webkit-transform: scale(0.95);
+		-moz-transform: scale(0.95);
+		-o-transform: scale(0.95);
+		-ms-transform: scale(0.95);
+		transform: scale(0.95);
+	}
 
 #nav-container
 {

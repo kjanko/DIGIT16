@@ -3,9 +3,40 @@ var toggled = false;
 ( function($) 
 {
 	$(document).ready( function() 
-	{ 
+	{ 	
+		$('#contact').hide();
+		$('.my-tooltip').hide();
+		setTimeout(function(){
+			$('#section-preloader').fadeOut(1000);
+		}, 2000);
+		
+		setTimeout(function(){
+			$('.my-tooltip').slideDown(1000);
+		}, 2300);
+		
 		var $logo = $('#logo');
 		var $search = $('#search');
+		var $contact =$('#mail');
+		
+		/* contact */
+		$contact.click(function()
+		{
+			$('#contact').removeClass('slideOutUp');
+			$('#contact').show();
+			$('#contact').addClass('animated');
+			$('#contact').addClass('slideInDown');
+		});
+		
+		$('.back-to-menu').click(function()
+		{
+			$('#contact').removeClass('slideInDown');
+			$('#contact').addClass('slideOutUp');
+			
+			setTimeout(function(){
+				$('#contact').hide();
+			}, 1000);
+		});
+		
 		
 		/* search */
 		$search.click(function(){

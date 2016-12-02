@@ -15,6 +15,8 @@
 		<link rel="stylesheet" href="./css/animation.css">
 		<link rel="stylesheet" href="./css/tooltip.css">
 		<link rel="stylesheet" href="./css/search.css">
+		<link rel="stylesheet" href="./css/preloader.css">
+		<link rel="stylesheet" href="./css/ui.css">
 		<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
 		<link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
 		
@@ -33,17 +35,28 @@
 		<!-- Material  -->
 		<link rel="stylesheet" href="https://code.getmdl.io/1.2.1/material.indigo-pink.min.css">
 		<script defer src="https://code.getmdl.io/1.2.1/material.min.js"></script>
-		
+				
 	</head>
 	
 	<body>
+	
+		<section id="section-preloader">
+			<div class="preloader loading">
+				<span class="slice"></span>
+				<span class="slice"></span>
+				<span class="slice"></span>
+				<span class="slice"></span>
+				<span class="slice"></span>
+				<span class="slice"></span>
+			</div>
+		</section>
 	
 		<section id="landing">
 		
 			<section id="search-page">
 				<button type="button" class="close">×</button>
-				<input type="search" value="" placeholder="type keyword(s) here">
-				<button type="submit" class="btn btn-primary">Search</button>
+				<input type="search" value="" placeholder="внеси клучни зборови">
+				<button type="submit" class="btn btn-primary">Барај</button>
 			</section>
 		
 			<canvas id="canv" class="animated fadeIn">
@@ -51,7 +64,7 @@
 			
 			<section id="absolute-canvas">
 				
-				<img src="./images/logoWithShadow.png" id="logo" class="img-responsive" alt="" title="СП ФИНКИ" />
+				<img src="./images/logoWithShadow.png" id="logo" class="img-responsive" alt="" />
 
 				<nav id="nav-container">
 				    <a href='#' class='deg0'><i id="search" class="material-icons">search</i></a>
@@ -67,10 +80,50 @@
 			</section>
 			
 		</section>
+		
+		<section id="contact">
+			<div id="big-screen" style="top: 86px;">			 
+			 
+				<div class="page" id="contact-page" style="display: block;">
+					<h2 id="header-ui"><strong>Contact us</strong></h2>
+					
+					<div class="row">
+						<div class="col-md-6">
+							<form method="post" action="" id="contact-form">
+								<div><input type="text" name="contact-name" id="contact-name" value="Name (required)"></div>
+								<div><input type="text" name="contact-subject" id="contact-subject" value="Subject (required)"></div>
+								<div><input type="text" name="contact-email" id="contact-email" value="Email (required)"></div>
+								<div>
+									<textarea name="contact-message" id="contact-message" cols="30" rows="5">Message (required)</textarea>
+								</div>
+								<div><a href="#" class="button" id="send-email-button"><span>Send Email</span></a></div>
+							</form>
+						</div>
+						<div class="col-md-6 last">
+							<h4 class="simple">Адреса</h4>
+							<p>
+								Држава: Република Македонија<br>
+								Град: Скопје<br>
+							</p>
+							<p>
+								Email: sp@finki.ukim.mk<br>
+								Телефон: +38902223305<br>
+							</p>
+							
+							<div class="google-maps">
+								<iframe src="https://www.google.com/maps/embed?pb=!1m14!1m12!1m3!1d7098.94326104394!2d78.0430654485247!3d27.172909818538997!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!5e0!3m2!1sen!2s!4v1385710909804" width="600" height="450" frameborder="0" style="border:0"></iframe>
+							</div>
+						</div>
+					</div>
+				</div>
+				 
+				<a href="#" class="back-to-menu">back to menu</a>
+			</div>
+		</section>
 
 	</body>
+		
 	<script src="./js/custom.js"></script>
 	<script src="./js/landing-canvas.js"></script>
-
 		
 </html>
