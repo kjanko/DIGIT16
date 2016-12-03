@@ -5,6 +5,8 @@ var toggled = false;
 	$(document).ready( function() 
 	{ 	
 		$('#contact').hide();
+		$('#social').hide();
+
 		$('.my-tooltip').hide();
 		setTimeout(function(){
 			$('#section-preloader').fadeOut(1000);
@@ -17,6 +19,7 @@ var toggled = false;
 		var $logo = $('#logo');
 		var $search = $('#search');
 		var $contact =$('#mail');
+		var $social = $('#location')
 		
 		/* contact */
 		$contact.click(function()
@@ -34,6 +37,24 @@ var toggled = false;
 			
 			setTimeout(function(){
 				$('#contact').hide();
+			}, 1000);
+		});
+// social
+		$social.click(function()
+		{
+			$('#social').removeClass('slideOutUp');
+			$('#social').show();
+			$('#social').addClass('animated');
+			$('#social').addClass('slideInDown');
+		});
+		
+		$('.back-to-menu').click(function()
+		{
+			$('#social').removeClass('slideInDown');
+			$('#social').addClass('slideOutUp');
+			
+			setTimeout(function(){
+				$('#social').hide();
 			}, 1000);
 		});
 		
